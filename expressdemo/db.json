@@ -1,0 +1,29 @@
+{
+    "students": [
+        {
+            "name": "Chunnu",
+            "roll": 10,
+            "is_married": false
+        },
+        {
+            "name": "Munnu",
+            "roll": 12,
+            "is_married": true
+        },
+        {
+            "name": "Albert",
+            "roll": 14,
+            "is_married": true
+        }
+    ],
+    "teachers": [
+        {
+            "name": "Pulkeet",
+            "sub": "BED"
+        },
+        {
+            "name": "Venu",
+            "sub": "DSA"
+        }
+    ]
+}
