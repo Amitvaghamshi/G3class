@@ -1,0 +1,19 @@
+{
+    "todos": [
+        {
+            "todo": "CODE",
+            "id": 1,
+            "isCompleted": false
+        },
+        {
+            "todo": "EAT",
+            "id": 2,
+            "isCompleted": true
+        },
+        {
+            "todo": "SLEEP",
+            "id": 3,
+            "isCompleted": false
+        }
+    ]
+}

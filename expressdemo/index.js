@@ -1,5 +1,6 @@
 const express=require("express");
 const fs=require("fs");
+const path=require("path");
 
 const app=express();
 //MIDDLEWARE
@@ -81,6 +82,30 @@ app.delete("/student/delete/:roll",(req,res)=>{
     parsed_data.students=new_students;
     fs.writeFileSync("./db.json",JSON.stringify(parsed_data));
     res.send("student deleted");
+})
+
+
+app.put("/update" ,(req,res)=>{
+    let roll=req.query.roll;
+    let new_student=req.body;
+    const data=fs.readFileSync("./db.json","utf-8");
+    const parsed_data=JSON.parse(data);
+    const students=parsed_data.students;
+
+    let new_students=students.map((el)=>{
+        if(el.roll==roll){
+          return  new_student;
+        }
+        return el;
+    })
+    parsed_data.students=new_students;
+    fs.writeFileSync("./db.json",JSON.stringify(parsed_data));
+    res.send("STUDENT UPDATED");
+})
+
+
+app.get("/getfile",(req,res)=>{
+    res.sendFile(path.join(__dirname,"/public/index.html"));
 })
 
 
